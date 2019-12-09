@@ -1,0 +1,44 @@
+---manifest.json---
+
+"routes": [{
+	"name": "RouteDartsUI",
+	"pattern": "RouteDartsUI",
+	"target": ["TargetDartsUI"]
+}],
+"targets": {
+	"TargetDartsUI": {
+		"viewType": "XML",
+		"transition": "slide",
+		"clearControlAggregation": false,
+		"viewId": "DartsUI",
+		"viewName": "DartsUI"
+	}
+}
+
+---webapp/view/DartUI.view.xml---
+<mvc:View controllerName="dartsui5.web.web.controller.DartsUI" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="DartsUI">
+					<content>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
+
+---webapp/controller/DartsUI.controller.js---
+sap.ui.define([
+	"sap/ui/core/mvc/Controller",
+	"sap/ui/model/json/JSONModel"
+], function (Controller, JSONModel) {
+	"use strict";
+
+	return Controller.extend("dartsui5.web.web.controller.DartsUI", {
+
+		onInit: function () {
+		}
+	});
+});

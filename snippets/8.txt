@@ -1,0 +1,7 @@
+---DartsUI.controller.js---
+"sap/m/MessageToast"
+
+---
+.fail((error) => {
+	MessageToast.show("Ongeldige invoer.")
+})

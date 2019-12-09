@@ -1,0 +1,36 @@
+---DartsUI.view.xml---
+<headerToolbar>
+	<Toolbar>
+		<SearchField
+			id="Search"
+			width=""
+			placeholder="Huidige score..."
+			showSearchButton="true"
+			search="onChange"
+			liveChange="onChange"/>
+	</Toolbar>
+</headerToolbar>
+
+---DartsUI.controller.js---
+onChange: function (oEvent) {
+	if (oEvent.getParameter("newValue")) {
+		$.ajax({
+				url: "/api/501/" + oEvent.getParameter("newValue")
+			})
+			.done((results) => {
+				this.oDartsModel.setProperty("/", results);
+				this.oDartsModel.updateBindings();
+			});
+	} else {
+		this.oDartsModel.setProperty("/", []);
+		this.oDartsModel.updateBindings();
+	}
+}
+
+---xs-apps.json---
+{
+	"source": "^/api(.*)",
+	"target": "$1",
+	"destination": "api",
+	"csrfProtection": true
+}

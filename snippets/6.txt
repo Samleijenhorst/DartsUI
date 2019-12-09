@@ -1,0 +1,14 @@
+---DartsUI.view.xml---
+<List
+	id="OptionsTable"
+	items="{path: 'DartsModel>/'}">
+	<items>
+		<StandardListItem
+			title="{DartsModel>value}">
+		</StandardListItem>
+	</items>
+</List>
+
+---DartsUI.controller.js---
+this.oDartsModel = new JSONModel({});
+this.getView().setModel(this.oDartsModel, "DartsModel");
