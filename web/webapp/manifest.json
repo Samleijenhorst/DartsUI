@@ -74,20 +74,6 @@
 				"controlAggregation": "pages",
 				"controlId": "app",
 				"clearControlAggregation": false
-			},
-			"routes": [{
-				"name": "RouteDartsUI",
-				"pattern": "RouteDartsUI",
-				"target": ["TargetDartsUI"]
-			}],
-			"targets": {
-				"TargetDartsUI": {
-					"viewType": "XML",
-					"transition": "slide",
-					"clearControlAggregation": false,
-					"viewId": "DartsUI",
-					"viewName": "DartsUI"
-				}
 			}
 		}
 	}
