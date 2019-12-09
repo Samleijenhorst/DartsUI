@@ -2,7 +2,7 @@
 Training app
 Vereisten:
 S-account
-SAP Cloud Platform trial-account
+SAP Cloud Platform trial-account op CloudFoundry, met tenminste één space
 
 In dit project staat een oefenapp die je kan helpen uit te gooien met darten. De app is nog niet af. Door de onderstaande instructies te volgen kan je zelf de app afmaken.
 
@@ -25,7 +25,8 @@ Rechtermuisklik op de map web en klik op Run>Run Index.html. Wacht tot de app op
 
 # 5. Toevoegen van een scherm aan de app
 
-Nu ga je code toevoegen. De code om toe te voegen kan je in de map 
+Nu ga je code toevoegen. De code om toe te voegen kan je in de map snippets vinden. De naamgeving van de bestanden in die map komt overeen met de nummers van de stappen in deze handleiding.
+
 Het eerste wat je aan de app gaat toevoegen is een scherm, waarin de rest van de inhoud weergegeven zal worden. Open het bestand met de naam "manifest.json". Hierin benoem je de views en de navigatie ernaartoe door het eerste stukje code uit 5.txt onderaan het bestand erin te kopiëren.
 
 Maak nu de view aan door in web/webapp/view een nieuw bestand aan te maken met de naam DartsUI.view.xml. In dit bestand geef je aan welke elementen op het scherm komen. Plak hierin het tweede stukje code uit 5.txt. Op dit moment staat er nog niets in de view.
@@ -34,13 +35,13 @@ De besturing van de view wordt gedaan door een controller. Hierin staan functies
 
 # 6. Toevoegen van een lijst aan het scherm
 
-Nu gaan we een lijst toevoegen aan de app. In 6.txt staat een lijst die je in de view kan plakken. Dit moet tussen de twee <content>-tags. Onder "items" in deze lijst staat de verwijzing naar een datamodel. Om een datamodel aan de lijst toe te voegen zodat er later gegevens in kunnen verschijnen moet je de onderste twee regels code uit 6.txt in de init-functie van de controller plakken.
+Nu gaan we een lijst toevoegen aan de app. In 6.txt staat een lijst die je in de view kan plakken. Dit moet tussen de twee content-tags. Onder "items" in deze lijst staat de verwijzing naar een datamodel. Om een datamodel aan de lijst toe te voegen zodat er later gegevens in kunnen verschijnen moet je de onderste twee regels code uit 6.txt in de init-functie van de controller plakken.
   
 Sla alles op en start de app opnieuw. Er staat nu een lijst in, maar nog geen gegevens.
 
 # 7. Toevoegen van gegevens aan de lijst
 
-De volgende stap is het ophalen van de data uit de API en het toevoegen aan de lijst. Hiervoor voegen we een zoekbalk toe aan de lijst waarin je de huidige score kan toevoegen. De server geeft vervolgens de snelste volgorde van worpen terug waarmee je uit kan gooien. Voeg in de view, net boven <items>, het eerste codeblok uit 7.txt toe. De eigenschappen onChange en onLiveChange van deze zoekbalk verwijzen naar een functie in de Controller. Deze functie wordt aangeroepen als je de waarde in de zoekbalk wijzigt.
+De volgende stap is het ophalen van de data uit de API en het toevoegen aan de lijst. Hiervoor voegen we een zoekbalk toe aan de lijst waarin je de huidige score kan toevoegen. De server geeft vervolgens de snelste volgorde van worpen terug waarmee je uit kan gooien. Voeg in de view, net boven <items>, het eerste codeblok uit 7.txt toe. De eigenschappen onChange van deze zoekbalk verwijzen naar een functie in de Controller. Deze functie wordt aangeroepen als je de waarde in de zoekbalk wijzigt.
 
 Het tweede blokje code bevat deze functie. Voeg deze toe aan de controller, net onder de init-functie. Hierin wordt de API aangesproken, en wanneer de reactie van de server binnenkomt worden de resultaten in de lijst gezet. Als het zoekveld leeg is wordt de lijst ook geleegd.
 
