@@ -29,9 +29,9 @@ Nu ga je code toevoegen. De code om toe te voegen kan je in de map snippets vind
 
 Het eerste wat je aan de app gaat toevoegen is een scherm, waarin de rest van de inhoud weergegeven zal worden. Open het bestand met de naam "manifest.json". Hierin benoem je de views en de navigatie ernaartoe door het eerste stukje code uit 5.txt onderaan het bestand erin te kopiëren, onderaan de tag routes.
 
-Maak nu de view aan door in web/webapp/view een nieuw bestand aan te maken met de naam DartsUI.view.xml. In dit bestand geef je aan welke elementen op het scherm komen. Plak hierin het tweede stukje code uit 5.txt. Op dit moment staat er nog niets in de view.
+Maak nu de view aan door in een nieuwe map web/webapp/view een nieuw bestand aan te maken met de naam DartsUI.view.xml. In dit bestand geef je aan welke elementen op het scherm komen. Plak hierin het tweede stukje code uit 5.txt. Op dit moment staat er nog niets in de view.
 
-De besturing van de view wordt gedaan door een controller. Hierin staan functies in javascript geschreven die bepalen wat er gebeurt in de view. Maak in web/webapp/controller een nieuw bestand aan met DartsUI.controller.js aan en plak het derde stukje uit 5.txt hierin. Sla alles op en start de webapp.
+De besturing van de view wordt gedaan door een controller. Hierin staan functies in javascript geschreven die bepalen wat er gebeurt in de view. Maak in een nieuwe map met pad web/webapp/controller een nieuw bestand aan met DartsUI.controller.js aan en plak het derde stukje uit 5.txt hierin. Sla alles op en start de webapp.
 
 # 6. Toevoegen van een lijst aan het scherm
 
