@@ -27,7 +27,7 @@ Rechtermuisklik op de map web en klik op Run>Run Index.html. Wacht tot de app op
 
 Nu ga je code toevoegen. De code om toe te voegen kan je in de map snippets vinden. De naamgeving van de bestanden in die map komt overeen met de nummers van de stappen in deze handleiding.
 
-Het eerste wat je aan de app gaat toevoegen is een scherm, waarin de rest van de inhoud weergegeven zal worden. Open het bestand met de naam "manifest.json". Hierin benoem je de views en de navigatie ernaartoe door het eerste stukje code uit 5.txt onderaan het bestand erin te kopiëren.
+Het eerste wat je aan de app gaat toevoegen is een scherm, waarin de rest van de inhoud weergegeven zal worden. Open het bestand met de naam "manifest.json". Hierin benoem je de views en de navigatie ernaartoe door het eerste stukje code uit 5.txt onderaan het bestand erin te kopiëren, onderaan de tag routes.
 
 Maak nu de view aan door in web/webapp/view een nieuw bestand aan te maken met de naam DartsUI.view.xml. In dit bestand geef je aan welke elementen op het scherm komen. Plak hierin het tweede stukje code uit 5.txt. Op dit moment staat er nog niets in de view.
 
