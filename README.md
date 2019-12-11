@@ -13,7 +13,7 @@ Kloon het project. Open de webIDE, en rechtermuisklik op "Workspace", en vervolg
 
 # 2. Starten van de API
 
-Open het DartsUI-project in de webIDE. Rechtermuisklik op de map src en klik op "Run as Node.js-application", en wacht tot de server gestart is.
+Open het DartsUI-project in de webIDE. Rechtermuisklik op de hoofdmap van het project (die met de naam DartsUI) en klik op Build>Build with Cloud MTA Build Tool. Wacht tot het proces klaar is. Rechtermuisklik op de map src en klik op "Run as Node.js-application", en wacht tot de server gestart is.
 
 # 3. Voorbereiden van de webapp
 
