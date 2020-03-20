@@ -27,7 +27,7 @@ onChange: function (oEvent) {
 	}
 }
 
----xs-apps.json---
+---xs-app.json---
 {
 	"source": "^/api(.*)",
 	"target": "$1",
