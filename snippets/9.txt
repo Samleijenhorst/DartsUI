@@ -23,3 +23,5 @@ sap.ui.define([], function () {
 		}
 	};
 });
+---DartsUI.controller.js---
+formatter: formatter,

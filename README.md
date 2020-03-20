@@ -13,7 +13,7 @@ Kloon het project. Open de webIDE, en rechtermuisklik op "Workspace", en vervolg
 
 # 2. Starten van de API
 
-Open het DartsUI-project in de webIDE. Rechtermuisklik op de map src en klik op "Run as Node.js-application", en wacht tot de server gestart is.
+Open het DartsUI-project in de webIDE. Rechtermuisklik op de hoofdmap van het project (die met de naam DartsUI) en klik op Build>Build with Cloud MTA Build Tool. Wacht tot het proces klaar is. Rechtermuisklik op de map src en klik op "Run as Node.js-application", en wacht tot de server gestart is.
 
 # 3. Voorbereiden van de webapp
 
@@ -27,7 +27,7 @@ Rechtermuisklik op de map web en klik op Run>Run Index.html. Wacht tot de app op
 
 Nu ga je code toevoegen. De code om toe te voegen kan je in de map snippets vinden. De naamgeving van de bestanden in die map komt overeen met de nummers van de stappen in deze handleiding.
 
-Het eerste wat je aan de app gaat toevoegen is een scherm, waarin de rest van de inhoud weergegeven zal worden. Open het bestand met de naam "manifest.json". Hierin benoem je de views en de navigatie ernaartoe door het eerste stukje code uit 5.txt onderaan het bestand erin te kopiëren, onderaan de tag routes.
+Het eerste wat je aan de app gaat toevoegen is een scherm, waarin de rest van de inhoud weergegeven zal worden. Open het bestand met de naam "manifest.json". Hierin benoem je de views en de navigatie ernaartoe door het eerste stukje code uit 5.txt onderaan het bestand erin te kopiëren, onderaan de tag routing.
 
 Maak nu de view aan door in een nieuwe map web/webapp/view een nieuw bestand aan te maken met de naam DartsUI.view.xml. In dit bestand geef je aan welke elementen op het scherm komen. Plak hierin het tweede stukje code uit 5.txt. Op dit moment staat er nog niets in de view.
 
@@ -43,7 +43,7 @@ Sla alles op en start de app opnieuw. Er staat nu een lijst in, maar nog geen ge
 
 De volgende stap is het ophalen van de data uit de API en het toevoegen aan de lijst. Hiervoor voegen we een zoekbalk toe aan de lijst waarin je de huidige score kan toevoegen. De server geeft vervolgens de snelste volgorde van worpen terug waarmee je uit kan gooien. Voeg in de view, net boven <items>, het eerste codeblok uit 7.txt toe. De eigenschappen onChange van deze zoekbalk verwijzen naar een functie in de Controller. Deze functie wordt aangeroepen als je de waarde in de zoekbalk wijzigt.
 
-Het tweede blokje code bevat deze functie. Voeg deze toe aan de controller, net onder de init-functie. Hierin wordt de API aangesproken, en wanneer de reactie van de server binnenkomt worden de resultaten in de lijst gezet. Als het zoekveld leeg is wordt de lijst ook geleegd.
+Het tweede blokje code bevat deze functie. Voeg deze toe aan de controller, net onder de init-functie. Zorg dat er een komma tussen de twee functies staan. Hierin wordt de API aangesproken, en wanneer de reactie van de server binnenkomt worden de resultaten in de lijst gezet. Als het zoekveld leeg is wordt de lijst ook geleegd.
 
 Om de API vanuit de app bereikbaar te maken moet ook het laatste stukje code aan bestand xs-app.json toegevoegd worden, onder "routes". 
 
@@ -51,12 +51,16 @@ Sla alles op en herstart de app.
 
 # 8. Toevoegen foutafhandeling
 
-Voeg bovenaan de controller de eerste regel uit 8.txt toe, onderaan het define-blok. Voeg achteraan het stukje code uit de vorige stap het tweede blokje code uit 8.txt toe. Als de API nu een foutmelding teruggeeft, krijgt je de melding dat de invoer ongeldig is. Dit kan je uitproberen door bijvoorbeeld een waarde hoger dan 501 in te voeren.
+Voeg bovenaan de controller de eerste regel uit 8.txt toe, onderaan het define-blok. Hiermee importeer je een nieuw element. Geef aan de functie dit nieuwe element mee door tussen de haakjes achter "function" een komma en het woord MessageToast toe te voegen. Voeg achteraan het stukje code uit de vorige stap het tweede blokje code uit 8.txt toe, net boven het woord "else" en precies voor de puntkomma. 
+
+Als de API nu een foutmelding teruggeeft, krijgt je de melding dat de invoer ongeldig is. Dit kan je uitproberen door bijvoorbeeld een waarde hoger dan 501 in te voeren.
 
 # 9. Toevoegen kleuren
 
 We gaan nu de UI wat aantrekkelijker maken door de kleuren van het dartbord weer te geven in de lijst.
 
-Voeg de eerste regel van 9.txt toe als eigenschap aan de tag <StandardListItem> in de view. Maak vervolgens een bestand met de naam formatter.js in web/webapp/model en plak hierin de rest van de code uit 9.txt. 
+Voeg de eerste regel van 9.txt toe als eigenschap aan de tag <StandardListItem> in de view. Maak vervolgens een bestand met de naam formatter.js in web/webapp/model en plak hierin het tweede stuk code uit 9.txt. 
+ 
+Voeg tot slot aan de controller het laatste stukje code toe, boven de init-functie.
   
  Sla alles op en herstart de app.
